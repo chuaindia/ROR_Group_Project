@@ -1,5 +1,4 @@
 class FoodsController < ApplicationController
- 
   def index
     @foods = @user.foods
   end
@@ -35,7 +34,7 @@ class FoodsController < ApplicationController
 
   private
 
-  
+
   def set_user
     @user = User.find(params[:user_id])
   end
@@ -44,7 +43,6 @@ class FoodsController < ApplicationController
     @food = set_user.foods.find(params[:id])
   end
 
-  
   def food_params
     params.require(:food).permit(:user_id, :name, :measurement_unit, :price, :quantity)
   end
