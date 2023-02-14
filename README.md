@@ -91,11 +91,11 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Muyiwa Fawole**
+👤 **Vitalis Mutwiri**
 
-- GitHub: [@samlorlah](https://github.com/samlorlah)
-- Twitter: [@samlorlah](https://twitter.com/samlorlah)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/muyiwa-fawole)
+- GitHub: [@svitalis123](https://github.com/svitalis123)
+- Twitter: [@WilsonVitalis](https://twitter.com/WilsonVitalis)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/vitalismutwiri)
 
 👤 **Tanusri Ghosh**
 - GitHub: [@chuaindia](https://github.com/chuaindia)
