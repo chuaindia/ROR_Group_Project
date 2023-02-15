@@ -13,3 +13,179 @@
  *= require_tree .
  *= require_self
  */
+.user_index_container_inner_container {
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border: 2px solid #111;
+  padding: 0.5rem;
+}
+
+.user_index_container_inner_container_first_div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  flex: 0.2;
+}
+
+.user_index_container_inner_container_second_div {
+  flex: 0.8;
+  padding: 1rem;
+}
+
+/* Hide the checkbox input */
+.toggle-btn input {
+  display: none;
+}
+
+/* Style the slider element */
+.toggle-btn .slider {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ccc;
+}
+
+/* Style the circular knob */
+.toggle-btn .slider::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+/* Style the slider when the checkbox is checked */
+.toggle-btn input:checked + .slider {
+  background-color: #2196f3;
+}
+
+/* Style the circular knob when the checkbox is checked */
+.toggle-btn input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.recipe_show_container_div_h2 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.recipe_show_container_div_first_div {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.recipe_show_container_div_second_div {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe_show_container_div_third_div_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+
+.recipe_show_container_div_third_div_button1,
+.recipe_show_container_div_third_div_button2 {
+  padding: 0.5rem;
+}
+
+.recipe_show_container_div_new_line {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #111;
+  margin-top: 0.5rem;
+}
+
+.recipe_show_container_div_table {
+  border: 1px solid #111;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 2rem auto 0.5rem auto;
+}
+
+.recipe_show_container_div_table_tr:nth-of-type(even) {
+  text-align: center;
+  background-color: #eeeeef;
+}
+
+.recipe_show_container_div_table_tr > th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.public_recipe_container_h2 {
+  text-align: center;
+}
+
+.public_recipe_container_inner_div {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #111;
+  gap: 4rem;
+  width: 80%;
+  margin: 2rem auto 0.5rem auto;
+}
+
+.public_recipe_container_inner_div_div1 {
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.public_recipe_container_inner_div_div2 {
+  flex: 0.8;
+  text-align: center;
+}
+
+.user_index_container_h2 {
+  background-color: aqua;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 50%;
+  height: 24px;
+  visibility: visible;
+  animation: news 5s linear;
+}
+
+@keyframes news {
+  0% {
+    opacity: 1;
+  }
+  100% { opacity: 0; }
+}
+
+.user_index_again_container_h2 {
+  margin: 0.5rem auto 0.5rem auto;
+  border: 1px solid #111;
+  padding: 1rem;
+}
+
+.new_button {
+  display: flex;
+  justify-content: center;
+}

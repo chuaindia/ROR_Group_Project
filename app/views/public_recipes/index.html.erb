@@ -1,0 +1,15 @@
+<div class="public_recipe_container">
+ <h2 class="public_recipe_container_h2">Public Recipes<h2>
+ <% @recipes.each do | recipe| %>
+    <div class="public_recipe_container_inner_div">
+      <div class="public_recipe_container_inner_div_div1">
+        <%= link_to recipe.name, user_recipe_path(recipe.user_id, recipe)  %><br>
+        by <%= @user.name %>
+      </div>
+      <div class="public_recipe_container_inner_div_div2">
+        <p>Total food items: 4</p>
+        <p>Total price: $203</p>
+      </div>
+    </div>
+ <%end%>
+</div>
