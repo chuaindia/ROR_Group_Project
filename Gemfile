@@ -15,9 +15,6 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# Authentication with devise
-gem 'devise'
-
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
@@ -73,3 +70,10 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# Authentication with bootstrap
+gem 'bootstrap', '~> 5.1' 
+
+# Authentication with devise
+gem 'devise'
+

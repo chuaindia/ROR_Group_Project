@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+.nav-item {
+ display: flex;
+ align-items: center;
+ margin-left: 0.5rem;
+}

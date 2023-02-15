@@ -1,7 +1,8 @@
-<% content_for :title, "ROR GROUP PROJECT App" %>
-<h1></h1>
-<section class="users-container">
-  <% @users.each do |user| %>
-    <%= render "user", user: user %>
-  <% end %>
-</section>
+<p style="color: cyan"><%= notice %></p>
+<h1>Users</h1>
+
+<div id="users">
+  <h2><%= 'Foods' %></h2>
+</div>
+
+<%= link_to "New user", new_user_session_path %> 
