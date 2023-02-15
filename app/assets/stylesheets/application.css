@@ -67,7 +67,7 @@
 
 /* Style the slider when the checkbox is checked */
 .toggle-btn input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Style the circular knob when the checkbox is checked */

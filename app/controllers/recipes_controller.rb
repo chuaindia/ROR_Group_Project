@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipes = Recipe.where(public: true, id:params[:id]).or(Recipe.where(user: current_user, id:params[:id]))
+    @recipes = Recipe.where(public: true, id: params[:id]).or(Recipe.where(user: current_user, id: params[:id]))
     @foods = Food.where(user_id: params[:user_id])
   end
 
