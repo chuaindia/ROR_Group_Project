@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @recipes = Recipe.where(user_id: params[:user_id])
   end

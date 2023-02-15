@@ -164,10 +164,14 @@ td {
 
 .user_index_container_h2 {
   background-color: aqua;
-  padding: 1rem;
+  position: absolute;
+  top: 10%;
+  font-size: medium;
+  padding: 0.5rem;
   border-radius: 8px;
   width: 50%;
-  height: 24px;
+  height: 30px;
+  text-align: center;
   visibility: visible;
   animation: news 5s linear;
 }
@@ -188,4 +192,10 @@ td {
 .new_button {
   display: flex;
   justify-content: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
 }

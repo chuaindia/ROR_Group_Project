@@ -5,4 +5,7 @@
 <% if can? :read, Recipe%>
   <%= render @recipes %>
 <%end%>
+<%if can? :create, Recipe%>
+  <%= link_to "new recipe", new_user_recipe_path(current_user)%>
+<%end%>
 </div>

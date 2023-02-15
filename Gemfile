@@ -78,3 +78,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+# Authentication with bootstrap
+gem 'bootstrap', '~> 5.1'

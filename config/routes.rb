@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create, :index, :destroy] do 
     resources :recipes, only: [:show, :new, :create, :index, :destroy] 
     resources :public_recipes, only: [:index] 
+    resources :general_shopping_list, only: [:index]
     resources :foods, only: [:show, :new, :create, :index, :destroy] 
   end
-  resources :food_recipes, only: [:create, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
