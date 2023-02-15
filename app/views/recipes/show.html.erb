@@ -1,0 +1,39 @@
+<div class="recipe_show_container">
+  <div class="recipe_show_container_div">
+    <% @recipes.each do |recipe| %>
+      <h2 class="recipe_show_container_div_h2"><%= recipe.name %></h2>
+      <div class="recipe_show_container_div_first_div">
+        <p>Preparation Time: <%= recipe.preparation_time %></p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="recipe_show_container_div_second_div">
+        <p>Cooking time: <%= recipe.cooking_time %></p>
+        <p>Steps go here</p>
+      </div>
+    <% end %>
+    <div class="recipe_show_container_div_third_div_button">
+      <button class="recipe_show_container_div_third_div_button1">Generate Shopping List</button>
+      <button class="recipe_show_container_div_third_div_button2">Add Ingredient</button>
+    </div>
+    <div class="recipe_show_container_div_new_line"></div>
+    <table class="recipe_show_container_div_table">
+    <% @foods.each do |food|%>
+      <tr class="recipe_show_container_div_table_tr">
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Actions</th>
+      </tr>
+      <tr class="recipe_show_container_div_table_tr" id="extra">
+        <td><%= food.name%></td>
+        <td><%= food.quantity%></td>
+        <td><%= food.price%></td>
+        <td><%= link_to "modify" %> <%= link_to "remove" %></td>
+      </tr>
+      <%end%>
+    <table>
+  <div>
+</div>

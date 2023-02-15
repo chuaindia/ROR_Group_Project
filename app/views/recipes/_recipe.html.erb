@@ -1,0 +1,11 @@
+<div class="user_index_container_inner_container">
+      <div class="user_index_container_inner_container_first_div">
+        <h2><%= recipe.name %></h2>
+        <% if can? :destroy, recipe%>
+          <%= button_to "Remove",user_recipe_path(recipe.user_id, recipe.id), method: :delete %>
+        <% end%>
+      </div>
+      <div class="user_index_container_inner_container_second_div">
+        <p><%= recipe.description %></p>
+      </div>
+    </div>
