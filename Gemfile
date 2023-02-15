@@ -72,8 +72,7 @@ group :test do
 end
 
 # Authentication with bootstrap
-gem 'bootstrap', '~> 5.1' 
+gem 'bootstrap', '~> 5.1'
 
 # Authentication with devise
 gem 'devise'
-
