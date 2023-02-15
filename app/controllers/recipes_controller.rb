@@ -24,13 +24,8 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipes = Recipe.where(user_id: params[:user_id], id: params[:id], public: true)
+    @recipes = Recipe.where(public: true, id:params[:id]).or(Recipe.where(user: current_user, id:params[:id]))
     @foods = Food.where(user_id: params[:user_id])
-  end
-
-  def public_recipes
-    @user = User.find(params[:user_id])
-    @recipes = Recipe.where(user_id: params[:user_id], public: true).order(created_at: :desc)
   end
 
   def destroy

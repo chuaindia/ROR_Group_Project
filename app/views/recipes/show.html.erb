@@ -4,15 +4,20 @@
       <h2 class="recipe_show_container_div_h2"><%= recipe.name %></h2>
       <div class="recipe_show_container_div_first_div">
         <p>Preparation Time: <%= recipe.preparation_time %></p>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
+        <% if recipe.public == true%>
+          <label class="toggle-btn">
+            <input type="checkbox" checked disabled>
+            <span class="slider round"></span>
+          </label>
+        <% end %>
       </div>
       <div class="recipe_show_container_div_second_div">
         <p>Cooking time: <%= recipe.cooking_time %></p>
         <p>Steps go here</p>
       </div>
+      <% if can? :create, recipe%>
+        <%= link_to "New recipe", new_user_recipe_path(recipe.user_id), class: "new_button" %>
+      <%end%>
     <% end %>
     <div class="recipe_show_container_div_third_div_button">
       <button class="recipe_show_container_div_third_div_button1">Generate Shopping List</button>

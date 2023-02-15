@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get "/users/:user_id/public_recipes", to: "recipes#public_recipes"
   resources :users, only: [:show, :new, :create, :index, :destroy] do 
     resources :recipes, only: [:show, :new, :create, :index, :destroy] 
+    resources :public_recipes, only: [:index] 
     resources :foods, only: [:show, :new, :create, :index, :destroy] 
   end
   resources :food_recipes, only: [:create, :destroy]
