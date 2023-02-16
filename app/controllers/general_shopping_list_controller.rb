@@ -1,9 +1,10 @@
 class GeneralShoppingListController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_recipe, only: [:index]
   before_action :set_user, only: [:index]
 
   def index
-    @recipe_foods = @recipe.food_recipes.includes(:food).order(:id)
+    @recipe_foods = FoodRecipe.includes(:food).order(:food_id)
 
     @missing_ingredients = @recipe_foods.select { |ingredient| ingredient.quantity > ingredient.food.quantity }
     @missing_ingredients = @missing_ingredients.map do |ingredient|
@@ -26,6 +27,6 @@ class GeneralShoppingListController < ApplicationController
   end
 
   def set_recipe
-    @recipe = set_user.recipes.where(id: params[:id])
+    @recipe=Recipe.where(params[:recipe_id])
   end
 end

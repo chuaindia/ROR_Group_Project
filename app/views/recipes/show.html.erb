@@ -18,11 +18,13 @@
       <% if can? :create, recipe%>
         <%= link_to "New recipe", new_user_recipe_path(recipe.user_id), class: "new_button" %>
       <%end%>
+      <div class="recipe_show_container_div_third_div_button">
+        <%= link_to "Generate Shopping List", user_recipe_general_shopping_list_index_path(recipe.user_id,recipe),  class: "recipe_show_container_div_third_div_button2"  %>
+        <button class="recipe_show_container_div_third_div_button2">Add Ingredient</button>
+      </div>
+      
     <% end %>
-    <div class="recipe_show_container_div_third_div_button">
-      <button class="recipe_show_container_div_third_div_button1">Generate Shopping List</button>
-      <button class="recipe_show_container_div_third_div_button2">Add Ingredient</button>
-    </div>
+    
     <div class="recipe_show_container_div_new_line"></div>
     <table class="recipe_show_container_div_table">
     <% @foods.each do |food|%>

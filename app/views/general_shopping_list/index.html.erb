@@ -1,5 +1,4 @@
 <h1>GeneralShoppingList#index</h1>
-<% if can? :manage, @recipe %>
 <p>Missing food <%= @missing_ingredients.count %></p>
 <p>Total Price <%= @total_price %></p>
 
@@ -31,6 +30,4 @@
     </div>
   </div>
 </div>
-<% else %>
-  <p>Sorry you don't have permission to view this page</p>
-<% end %>
+
