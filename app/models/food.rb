@@ -3,7 +3,6 @@ class Food < ApplicationRecord
 
   validates :name, :measurement_unit, :price, :quantity, presence: true
 
-
   has_many :foods_recipes
   has_many :recipes, through: :food_recipes
 end
