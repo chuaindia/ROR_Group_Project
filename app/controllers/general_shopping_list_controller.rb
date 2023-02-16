@@ -27,6 +27,6 @@ class GeneralShoppingListController < ApplicationController
   end
 
   def set_recipe
-    @recipe=Recipe.where(params[:recipe_id])
+    @recipe = Recipe.where(params[:recipe_id])
   end
 end

@@ -28,7 +28,7 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food=Food.find(params[:id])
+    @food = Food.find(params[:id])
     if @food.destroy
       flash[:success] = 'Food was successfully deleted.'
     else
@@ -44,7 +44,7 @@ class FoodsController < ApplicationController
   end
 
   def set_food
-    @food = Food.where(id:params[:id])
+    @food = Food.where(id: params[:id])
   end
 
   def food_params
