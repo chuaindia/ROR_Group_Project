@@ -1,14 +1,38 @@
-<p style="color: green"><%= notice %></p>
+<div class="container rounded-top mb-4">
+  <div class="container d-flex gap-5 align-items-center">
+    <h1>Hi, <%= current_user.name %></h1>
 
-<h1>Foods</h1>
+    <div class="ms-auto m-1">
+      <%= link_to "Add New food", new_user_food_path(current_user), class: "btn btn-warning mt-10 mb-10 text-end m-3 me-auto order-last" %>
+    </div>
+  </div>
 
-<div id="foods">
+  <div class='shadow-lg p-3 bg-body-tertiary'>
+    <div class="d-flex justify-content-between foods_title">
+      <h5>
+        Food
+      </h5>
+      <h5>
+        Quantity
+      </h5>  
+      <h5>
+        Unit of Measurement
+      </h5>
+      <h5>
+        Unit of Price
+      </h5>
+      <h5>
+        Actions
+      </h5>
+    </div>
+  </div>
+
   <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-    <%= link_to "Open Food", user_food_path(@user, food), class: 'button-2' %>      
-    </p>
+    <div class='shadow-lg p-3 bg-body-tertiary'>
+      <div class="d-flex align-items-center">
+        <%= render food %>
+        <h3><%= button_to "Delete", food, method: :delete,  class: 'btn btn-warning m-2 text-end delete', data: { turbo: false }  %></h3>
+      </div>
+    </div>
   <% end %>
 </div>
-
-<%= link_to "New food", new_user_food_path %>
