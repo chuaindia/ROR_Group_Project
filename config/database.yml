@@ -84,7 +84,7 @@ test:
 #
 production:
   <<: *default
-  database: ROR_Group_Project_production
-  username: vitalis
+  database: ror_group_project_production
+  username: postgres
   password: <%= ENV["ROR_GROUP_DATABASE_PASSWORD"] %>
 

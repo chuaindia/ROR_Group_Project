@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 # ignore passwords
 local_env.yml
+node_modules
 # Ignore bundler config.
 /.bundle
 
