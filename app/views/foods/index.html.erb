@@ -3,7 +3,7 @@
     <h1>Hi, <%= current_user.name %></h1>
 
     <div class="ms-auto m-1">
-      <%= link_to "Add New food", new_user_food_path(current_user), class: "btn btn-warning mt-10 mb-10 text-end m-3 me-auto order-last" %>
+      <%= link_to "Add New food", new_user_food_path, class: "btn btn-warning mt-10 mb-10 text-end m-3 me-auto order-last" %>
     </div>
   </div>
 
@@ -14,12 +14,12 @@
       </h5>
       <h5>
         Quantity
-      </h5>  
-      <h5>
-        Unit of Measurement
       </h5>
       <h5>
-        Unit of Price
+        Measurement unit
+      </h5>
+      <h5>
+        Unit price
       </h5>
       <h5>
         Actions
@@ -31,6 +31,7 @@
     <div class='shadow-lg p-3 bg-body-tertiary'>
       <div class="d-flex align-items-center">
         <%= render food %>
+        <h3><%=  button_to 'Delete', user_foods_path(food), form: { data: { turbo_confirm: "Are you sure?" } },  method: :delete %></h3>
       </div>
     </div>
   <% end %>
