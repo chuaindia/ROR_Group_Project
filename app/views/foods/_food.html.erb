@@ -1,6 +1,6 @@
 <div id="<%= dom_id food %>" class="d-flex justify-content-between foods">
   <p>
-    <%= food.name %>
+    <%= link_to food.name, user_food_path(current_user, food) %>
   </p>
 
   <p>
