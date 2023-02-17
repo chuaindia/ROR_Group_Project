@@ -1,10 +1,10 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_food, only: %i[show destroy]
-  before_action :set_user, only: %i[index show create]
+  before_action :set_food, only: %i[index show create destroy]
+  before_action :set_user, only: %i[index show create destroy]
 
   def index
-    @foods = @user.foods
+    @foods = Food.where(user_id: params[:user_id])
   end
 
   def show
