@@ -1,32 +1,32 @@
-<a name="readme-top"></a>
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App with Ruby on Rails ](#-blog-app-with-ruby-on-rails-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Install](#install)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
-  - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+- [Diagram](#diagram)   
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-# 📖 Blog App with Ruby on Rails <a name="about-project"></a>
+<!-- PROJECT DESCRIPTION -->
 
-> A blog application made with Ruby on Rails. This is an educational project for learning Ruby on Rails.
+# Recipe App <a name="about-project"></a>
+
+
+**Recipe App** keeps track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> This project was developed with Ruby ob Rails
 
 <details>
   <summary>Server</summary>
@@ -35,12 +35,26 @@
   </ul>
 </details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+### ERD Diagram <a name="diagram">
+![Preview](./app/assets/images/recipe-app.png)
+
+<!-- Features -->
+
+### Key Features <a id="key-features"></a>
+
+- **A login page**
+- **A registration page**
+- **A food list**
+- **A recipes list**
+- **A general shopping list view**
+- **A list of public recipes**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -48,93 +62,99 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need Ruby v3+, Rails v7+ and Postgresql installed on your machine.
+In order to run this project you need:
 
-```sh
- gem install rails
-```
+- Ruby
+- Rails
+- Postgresql
+
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
+  cd blog-app
   git clone git@github.com:samlorlah/blog-with-rails.git
 ```
+
 ### Install
 
 Install this project with:
 
+- After cloning type 'cd blog-app'.
+- Run 'bundle install' to install all the required dependencies.
 
-```sh
-  cd blog-with-rails
-  gem install
-```
 ### Usage
 
 To run the project, execute the following command:
+- Run 'rails db:create' to create a new database
+- Run 'rails db:migrate' to migrate the db and build the schema
+- Run 'rails s' to start the dev server
 
+<p align="right"><a href="#readme-top">back to top</a></p>
 
-```sh
-  rails server
-```
-
-### Run tests
-
-To run tests, run the following command:
-
-```sh
-  rspec spec
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Muyiwa Fawole**
+👤 **Vitalis Mutwiri**
 
-- GitHub: [@samlorlah](https://github.com/samlorlah)
-- Twitter: [@samlorlah](https://twitter.com/samlorlah)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/muyiwa-fawole)
+- GitHub: [@svitalis123](https://github.com/svitalis123)
+- Twitter: [@WilsonVitalis](https://twitter.com/WilsonVitalis)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/vitalismutwiri)
 
 👤 **Tanusri Ghosh**
 - GitHub: [@chuaindia](https://github.com/chuaindia)
 - Twitter: [@chuaghosh](https://twitter.com/chuaghosh25) 
 - LinkedIn: [@Ghosh](https://www.linkedin.com/in/tanusri-ghosh-2a56b814/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Views to Add Users, Posts and Comments
-- [ ] API routing
+> Features to add to the project.
+- [ ] **Pagination or infinite scrolling for the lists.**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
+<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Give a ⭐️ if you like this project!
-- If you like this project, please give a ⭐️.
+If you like this project...
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<!-- FAQ (optional) -->
 
-> Hat tip to anyone whose code was used
-- I would like to thank all my team members in Microverse
+## ❓ FAQ <a name="faq"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- **Do I have to have any previous knowledge about ruby to use this project?**
+
+  - No!
+
+- **How to use this project?**
+
+  - check the [Getting Started](#getting-started) section to have a complete guid on how to setup and run teh project.
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<p align="right"><a href="#readme-top">back to top</a></p>

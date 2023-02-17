@@ -1,0 +1,18 @@
+<div id="<%= dom_id food %>" class="d-flex justify-content-between foods">
+  <p>
+    <%= link_to food.name, user_food_path(current_user, food) %>
+  </p>
+
+  <p>
+    <%= food.quantity %>
+  </p>
+
+  <p>
+    <%= food.measurement_unit %>
+  </p>
+
+  <p>
+    $<%= food.price %>
+  </p>
+  <%= button_to "delete", user_food_path(id: food), method: :delete %>
+</div>

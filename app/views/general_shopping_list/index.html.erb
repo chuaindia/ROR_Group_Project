@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="titles">Shopping Lists </h1>
+  <div>
+    <% if @recipe_foods %>
+      <h4>Amount of food items to buy: <%= @recipe_foods.count %></h4>
+    <% else %>
+      <h2>Create food_recipe record </h2>
+    <% end %>
+    <h4>Total value of food needed: <%= "$#{@total}" %>
+  </div>
+
+  <table class="table">
+  <% if @recipe_foods %>
+  <% if @recipe_foods.empty? %>
+  <p>No ingredients included on recipe yet... </p>
+  <% else %>
+  <%end%>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipe_foods.each do |item| %>
+      <tr>
+        <td><%= item.food.name %></td>
+        <td><%= item.quantity %><%= item.food.measurement_unit %></td>
+        <td><%= "$#{item.quantity.to_i * item.food.price}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+<% end %> 
+</table>
+
+</div>
