@@ -6,4 +6,8 @@ class Recipe < ApplicationRecord
   belongs_to :user
   has_many :food_recipes
   has_many :foods, through: :food_recipes
+
+  def total_price
+    food_recipes.sum { |item| item.quantity * item.food.price }
+  end
 end

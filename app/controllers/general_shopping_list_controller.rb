@@ -1,32 +1,17 @@
 class GeneralShoppingListController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_recipe, only: [:index]
-  before_action :set_user, only: [:index]
 
   def index
-    @recipe_foods = FoodRecipe.includes(:food).order(:food_id)
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_foods = @recipe.food_recipes.includes([:food])
+    @total = sum(@recipe_foods)
+  end
 
-    @missing_ingredients = @recipe_foods.select { |ingredient| ingredient.quantity > ingredient.food.quantity }
-    @missing_ingredients = @missing_ingredients.map do |ingredient|
-      {
-        name: ingredient.food.name,
-        unit: ingredient.food.measurement_unit,
-        quantity: ingredient.quantity - ingredient.food.quantity,
-        price: ingredient.food.price * (ingredient.quantity - ingredient.food.quantity)
-      }
+  def sum(recipe_foods)
+    total = 0
+    recipe_foods.each do |item|
+      total += item.food.price * item.quantity.to_i
     end
-
-    @total_price = @missing_ingredients.map { |ingredient| ingredient[:price] }.sum
-  end
-
-  private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_user
-    @user = User.find(current_user.id)
-  end
-
-  def set_recipe
-    @recipe = Recipe.where(params[:recipe_id])
+    total
   end
 end
